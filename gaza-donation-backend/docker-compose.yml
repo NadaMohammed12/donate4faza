@@ -1,0 +1,37 @@
+
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8010:8000"
+    depends_on:
+      - db
+    networks:
+      - laravel
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: Ahmed
+      POSTGRES_USER: Ahmed
+      POSTGRES_PASSWORD: 1712001Ahmed
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - laravel
+
+volumes:
+  pgdata:
+
+networks:
+  laravel:
+
+
+
