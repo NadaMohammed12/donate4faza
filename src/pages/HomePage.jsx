@@ -13,6 +13,11 @@ import banner1 from "../assets/slide1.png";
 import banner2 from "../assets/slide2.png";
 import banner3 from "../assets/slide3.png";
 import banner4 from "../assets/slide4.png";
+import imgcom1 from "../assets/";
+import imgcom2 from "../assets/";
+import imgcom3 from "../assets/";
+import imgcom4 from "../assets/";
+import imgcom5 from "../assets/";
 
 
 
