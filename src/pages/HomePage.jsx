@@ -123,7 +123,7 @@ const Home = () => {
         <h3 className="text-xl text-gray-700 mb-2">{t("amountRaised")}</h3>
         <div className="text-5xl font-bold text-green-600">
           <CountUp
-            end={totalDonations}
+            end={1250,55}
             duration={4}
             separator=","
             suffix=" $"
