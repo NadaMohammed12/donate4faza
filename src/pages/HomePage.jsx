@@ -13,11 +13,11 @@ import banner1 from "../assets/slide1.png";
 import banner2 from "../assets/slide2.png";
 import banner3 from "../assets/slide3.png";
 import banner4 from "../assets/slide4.png";
-import imgcom1 from "../assets/";
-import imgcom2 from "../assets/";
-import imgcom3 from "../assets/";
-import imgcom4 from "../assets/";
-import imgcom5 from "../assets/";
+import imgcom1 from "../assets/p.png";
+import imgcom2 from "../assets/1.jpeg";
+import imgcom3 from "../assets/0.jpeg";
+import imgcom4 from "../assets/4.jpeg";
+import imgcom5 from "../assets/2.jpeg";
 
 
 
@@ -67,16 +67,7 @@ const Home = () => {
 
   ];
 
-  // بيانات الحملات
-  useEffect(() => {
-    axios.get('http://localhost:8010/api/campaigns')
-      .then(res => {
-        setCampaigns(res.data);
-      })
-      .catch(err => {
-        console.error("خطأ في جلب البيانات:", err);
-      });
-  }, []);
+  
 
   useEffect(() => {
     const fetchTotalDonations = async () => {
@@ -148,15 +139,145 @@ const Home = () => {
         {/* بطاقات الحملات */}
           <h2 className="text-2xl font-semibold mb-4">{t("CurrentCampaigns")}</h2>
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {campaigns.map((camp) => (
-    <div key={camp.id} className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+ 
+    <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
       <img
-        src={camp.image_url}
-        alt={camp.title_en}
+        src={imgcom}
+        alt={t("title1")}
         className="w-full aspect-square object-cover rounded-md"
       />
       <h3 className="mt-4 text-lg font-bold text-center">
-        {i18n.language === 'ar' ? camp.title_ar : camp.title_en}
+        {t("title1")}
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm text-center">
+      </p>
+      <div className="mt-4 flex gap-4">
+       <Link
+  to="/donate"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("donate")}
+</Link>
+
+<Link
+  to="/CurrentCampaigns"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("aboutC")}
+</Link>
+      </div>
+         <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+      <img
+        src={imgcom1}
+        alt={t("title1")}
+        className="w-full aspect-square object-cover rounded-md"
+      />
+      <h3 className="mt-4 text-lg font-bold text-center">
+        {t("title1")}
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm text-center">
+      </p>
+      <div className="mt-4 flex gap-4">
+       <Link
+  to="/donate"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("donate")}
+</Link>
+
+<Link
+  to="/CurrentCampaigns"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("aboutC")}
+</Link>
+      </div>
+    </div>   <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+      <img
+        src={imgcom2}
+        alt={t("title2")}
+        className="w-full aspect-square object-cover rounded-md"
+      />
+      <h3 className="mt-4 text-lg font-bold text-center">
+        {t("title2")}
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm text-center">
+      </p>
+      <div className="mt-4 flex gap-4">
+       <Link
+  to="/donate"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("donate")}
+</Link>
+
+<Link
+  to="/CurrentCampaigns"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("aboutC")}
+</Link>
+      </div>
+    </div>   <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+      <img
+        src={imgcom3}
+        alt={t("title3")}
+        className="w-full aspect-square object-cover rounded-md"
+      />
+      <h3 className="mt-4 text-lg font-bold text-center">
+        {t("title3")}
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm text-center">
+      </p>
+      <div className="mt-4 flex gap-4">
+       <Link
+  to="/donate"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("donate")}
+</Link>
+
+<Link
+  to="/CurrentCampaigns"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("aboutC")}
+</Link>
+      </div>
+         <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+      <img
+        src={imgcom4}
+        alt={t("title4")}
+        className="w-full aspect-square object-cover rounded-md"
+      />
+      <h3 className="mt-4 text-lg font-bold text-center">
+        {t("title4")}
+      </h3>
+      <p className="mt-2 text-gray-600 text-sm text-center">
+      </p>
+      <div className="mt-4 flex gap-4">
+       <Link
+  to="/donate"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("donate")}
+</Link>
+
+<Link
+  to="/CurrentCampaigns"
+  className="text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition"
+>
+  {t("aboutC")}
+</Link>
+      </div>
+    </div>   <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
+      <img
+        src={imgcom5}
+        alt={t("title5")}
+        className="w-full aspect-square object-cover rounded-md"
+      />
+      <h3 className="mt-4 text-lg font-bold text-center">
+        {t("title5")}
       </h3>
       <p className="mt-2 text-gray-600 text-sm text-center">
       </p>
@@ -176,7 +297,9 @@ const Home = () => {
 </Link>
       </div>
     </div>
-  ))}
+    </div>
+    </div>
+  )
 </div>
   
    <div><hr /><br /><br /><br /><br /></div>   
